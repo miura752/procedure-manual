@@ -2,8 +2,9 @@
 #前期課題操作手順書
 
 #Vim のインストールおよび設定
-
+'''bash
 sudo yum install vim -y
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
