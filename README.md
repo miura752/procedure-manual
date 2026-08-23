@@ -2,7 +2,7 @@
 
 # 前期課題操作手順書
 
-#Vim のインストールおよび設定
+# Vim のインストールおよび設定
 
 sudo yum install vim -y
 
