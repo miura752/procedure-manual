@@ -1,5 +1,6 @@
 # procedure-manual
-#前期課題操作手順書
+
+# 前期課題操作手順書
 
 #Vim のインストールおよび設定
 
@@ -16,7 +17,7 @@ set autoindent
 
 
 
-#Docker のインストールと自動起動化
+# Docker のインストールと自動起動化
 
 sudo yum install -y docker
 
@@ -27,7 +28,7 @@ sudo systemctl enable docker
 
 
 
-#Docker Compose のインストール
+# Docker Compose のインストール
 
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
 
@@ -40,7 +41,7 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 
 
 
-#buildx のインストール
+# buildx のインストール
 
 mkdir -p ~/.docker/cli-plugins
 
@@ -55,7 +56,7 @@ chmod +x ~/.docker/cli-plugins/docker-buildx
 
 
 
-#作業ディレクトリと設定用ディレクトリの作成
+# 作業ディレクトリと設定用ディレクトリの作成
 
 compose.yml
 
@@ -66,13 +67,13 @@ public/kadai.php
 
 
 
-#Docker コンテナの起動
+# Docker コンテナの起動
 
 docker compose up -d
 
 
 
-データベースの初期テーブル作成
+# データベースの初期テーブル作成
 
 docker compose exec mysql mysql example_db
 
@@ -92,6 +93,6 @@ ALTER TABLE `bbs_entries` ADD COLUMN image_filename TEXT DEFAULT NULL;
 
 
 
-動作確認
+# 動作確認
 
 http://3.85.93.19/kadai.php
