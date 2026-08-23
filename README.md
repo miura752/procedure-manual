@@ -1,5 +1,3 @@
-# procedure-manual
-
 # 前期課題操作手順書
 
 ## Vim のインストールおよび設定
