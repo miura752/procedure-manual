@@ -4,6 +4,7 @@
 ```
 sudo yum install vim -y
 ```
+vim ~/.vimrc
 ```
 set expandtab
 set tabstop=2
