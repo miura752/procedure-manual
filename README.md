@@ -16,6 +16,13 @@ set autoindent
 ```
 sudo yum install screen -y
 ```
+## vim ~/.screenrc
+```
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+hardstatus alwayslastline "%{= bw}%-w%{= wk}%n%t*%{-}%+w"
+```
 
 ## Docker のインストールと自動起動化
 ```
@@ -67,13 +74,7 @@ vim public/kadai.php
 ```
 docker compose up -d
 ```
-## vim ~/.screenrc
-```
-defutf8 on
-defencoding utf8
-encoding utf8 utf8
-hardstatus alwayslastline "%{= bw}%-w%{= wk}%n%t*%{-}%+w"
-```
+
 
 ## データベースの初期テーブル作成
 ```
