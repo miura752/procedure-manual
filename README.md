@@ -12,7 +12,10 @@ set shiftwidth=2
 set autoindent
 ```
 
-
+## screen のインストール
+```
+sudo yum install screen -y
+```
 
 ## Docker のインストールと自動起動化
 ```
@@ -21,8 +24,6 @@ sudo systemctl start docker
 sudo systemctl enable docker
 ```
 
-
-
 ## Docker Compose のインストール
 ```
 DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
@@ -30,8 +31,6 @@ mkdir -p $DOCKER_CONFIG/cli-plugins
 curl -SL [https://github.com/docker/compose/releases/download/v5.1.2/docker-compose-linux-x86_64](https://github.com/docker/compose/releases/download/v5.1.2/docker-compose-linux-x86_64) -o $DOCKER_CONFIG/cli-plugins/docker-compose
 chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
-
-
 
 ## buildx のインストール
 ```
@@ -43,21 +42,38 @@ curl -L $BUILDX_URL -o ~/.docker/cli-plugins/docker-buildx
 chmod +x ~/.docker/cli-plugins/docker-buildx
 ```
 
+## docker compose 
+```
+mkdir dockertest
+cd dockertest
+vim compose.yml
+docker compose up
+```
+
+## nginx
+```
+mkdir nginx
+mkdir nginx/conf.d
+vim nginx/conf.d/default.conf
+```
 
 ## 作業ディレクトリと設定用ディレクトリの作成
 ```
-compose.yml
-nginx/conf.d/default.conf
-public/kadai.php
+mkdir public
+vim public/kadai.php
 ```
-
-
 
 ## Docker コンテナの起動
 ```
 docker compose up -d
 ```
-
+## vim ~/.screenrc
+```
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+hardstatus alwayslastline "%{= bw}%-w%{= wk}%n%t*%{-}%+w"
+```
 
 ## データベースの初期テーブル作成
 ```
